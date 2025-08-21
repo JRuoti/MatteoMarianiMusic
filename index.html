@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matteo Mariani Music</title>
+    <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -19,9 +21,9 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
-                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Concerts</a>
-                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                        <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#concerts" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Concerts</a>
+                        <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
                     </div>
                 </div>
                 
@@ -40,9 +42,9 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
-                         <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
-                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Concerts</a>
-                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                         <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#concerts" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Concerts</a>
+                        <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
             </div>
         </div>
     </nav>
@@ -73,7 +75,7 @@
 </div>
 
 <!-- Second Section -->
-<div class="flex flex-col-reverse md:flex-row h-auto md:h-screen">
+<div id="about" class="flex flex-col-reverse md:flex-row h-auto md:h-screen">
   <!-- Left Column (gradient placeholder - visibile a sinistra su desktop, sotto su mobile) -->
   <div
     class="w-full md:w-1/2 min-h-[250px] md:min-h-full bg-gradient-to-br from-purple-400 to-pink-600">
@@ -110,11 +112,11 @@ Harris among many others.
 
 
     <!-- Third Section - Concerti -->
-    <div class="min-h-screen bg-white py-20">
+    <div id="concerts" class="min-h-screen bg-white py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Matteo's Concerts</h2>
-                <p class="text-xl text-gray-600">Rivivi i momenti più belli dei miei ultimi tour</p>
+                <p class="text-xl text-gray-600">Explore the timeline of past performances. Relive the journey.</p>
             </div>
 
             <!-- Tab Navigation -->
@@ -133,58 +135,73 @@ Harris among many others.
                     <div class="space-y-4">
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Milano - San Siro Stadium</h3>
-                                <p class="text-gray-600">20 Giugno 2025 • 50,000+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Ibiza - Can Jaume</h3>
+                                <p class="text-gray-600">29 June 2025 • Mariani-Serrabofil • Duo live</p>
                             </div>
-                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Prossimo</span>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Upcoming</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Roma - Stadio Olimpico</h3>
-                                <p class="text-gray-600">15 Luglio 2025 • 65,000+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Ibiza - Jazztabe</h3>
+                                <p class="text-gray-600">26 June 2025 • Quartet live</p>
                             </div>
-                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Prossimo</span>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Upcoming</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Milano - Alcatraz</h3>
-                                <p class="text-gray-600">15 Giugno 2024 • 2,000+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Boston - Mad Monkfish</h3>
+                                <p class="text-gray-600">9 May 2025 • Bud's Bud w/ Kevin Harris</p>
                             </div>
-                            <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Sold Out</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Roma - Atlantico</h3>
-                                <p class="text-gray-600">22 Luglio 2024 • 1,500+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Boston - Mad Monkfish</h3>
+                                <p class="text-gray-600">9 April 2025 • Kenny Werner's Effortless Mastery Group</p>
                             </div>
-                            <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Sold Out</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Napoli - Casa della Musica</h3>
-                                <p class="text-gray-600">5 Settembre 2024 • 1,200+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Boston - Consulate General of Italy</h3>
+                                <p class="text-gray-600">4 March 2024</p>
                             </div>
-                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Firenze - Viper Theatre</h3>
-                                <p class="text-gray-600">12 Marzo 2023 • 800+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Milan - Tin Jazz Club</h3>
+                                <p class="text-gray-600">15 July 2024 • Mariani Quartet w/ Antonio Zambrini</p>
                             </div>
-                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Bologna - Estragon</h3>
-                                <p class="text-gray-600">25 Maggio 2023 • 1,000+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Milan - Verdi Jazz Orchestra Conservatory of Milan</h3>
+                                <p class="text-gray-600">10 May 2024</p>
                             </div>
-                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Milan - Verdi Jazz Orchestra Conservatory of Milan</h3>
+                                <p class="text-gray-600">29 January 2024</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Orvieto - Umbria Jazz</h3>
+                                <p class="text-gray-600">28 December 2023 • Mariani Sextet</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Como - Teatro Musa</h3>
+                                <p class="text-gray-600">1 February 2023 • Orchestra da Camera Canova</p>
+                            </div>
                         </div>
                     </div>
                     <div class="mt-8 text-center">
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                            Book a Concert
-                        </button>
+                        <a href="mailto:matteomariani@gmail.com">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+                                Book a Concert
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -192,25 +209,39 @@ Harris among many others.
             <div class="tab-content hidden" id="tab-2025">
                 <div class="max-w-4xl mx-auto">
                     <div class="space-y-4">
-                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Milano - San Siro Stadium</h3>
-                                <p class="text-gray-600">20 Giugno 2025 • 50,000+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Ibiza - Can Jaume</h3>
+                                <p class="text-gray-600">29 June 2025 • Mariani-Serrabofil • Duo live</p>
                             </div>
-                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Prossimo</span>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Upcoming</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Roma - Stadio Olimpico</h3>
-                                <p class="text-gray-600">15 Luglio 2025 • 65,000+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Ibiza - Jazztabe</h3>
+                                <p class="text-gray-600">26 June 2025 • Quartet live</p>
                             </div>
-                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Prossimo</span>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Upcoming</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Boston - Mad Monkfish</h3>
+                                <p class="text-gray-600">9 May 2025 • Bud's Bud w/ Kevin Harris</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Boston - Mad Monkfish</h3>
+                                <p class="text-gray-600">9 April 2025 • Kenny Werner's Effortless Mastery Group</p>
+                            </div>
                         </div>
                     </div>
                     <div class="mt-8 text-center">
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                            Book a Concert
-                        </button>
+                       <a href="mailto:matteomariani@gmail.com">
+  <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+    Book a Concert
+  </button>
+</a>
                     </div>
                 </div>
             </div>
@@ -218,32 +249,37 @@ Harris among many others.
             <div class="tab-content hidden" id="tab-2024">
                 <div class="max-w-4xl mx-auto">
                     <div class="space-y-4">
-                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Milano - Alcatraz</h3>
-                                <p class="text-gray-600">15 Giugno 2024 • 2,000+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Boston - Consulate General of Italy</h3>
+                                <p class="text-gray-600">4 March 2024</p>
                             </div>
-                            <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Sold Out</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Roma - Atlantico</h3>
-                                <p class="text-gray-600">22 Luglio 2024 • 1,500+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Milan - Tin Jazz Club</h3>
+                                <p class="text-gray-600">15 July 2024 • Mariani Quartet w/ Antonio Zambrini</p>
                             </div>
-                            <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Sold Out</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Napoli - Casa della Musica</h3>
-                                <p class="text-gray-600">5 Settembre 2024 • 1,200+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Milan - Verdi Jazz Orchestra Conservatory of Milan</h3>
+                                <p class="text-gray-600">10 May 2024</p>
                             </div>
-                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Milan - Verdi Jazz Orchestra Conservatory of Milan</h3>
+                                <p class="text-gray-600">29 January 2024</p>
+                            </div>
                         </div>
                     </div>
                     <div class="mt-8 text-center">
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                            Book a Concert
-                        </button>
+                        <a href="mailto:matteomariani@gmail.com">
+  <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+    Book a Concert
+  </button>
+</a>
                     </div>
                 </div>
             </div>
@@ -253,29 +289,29 @@ Harris among many others.
                     <div class="space-y-4">
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Firenze - Viper Theatre</h3>
-                                <p class="text-gray-600">12 Marzo 2023 • 800+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Orvieto - Umbria Jazz</h3>
+                                <p class="text-gray-600">28 December 2023 • Mariani Sextet</p>
                             </div>
-                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900">Bologna - Estragon</h3>
-                                <p class="text-gray-600">25 Maggio 2023 • 1,000+ persone</p>
+                                <h3 class="text-lg font-semibold text-gray-900">Como - Teatro Musa</h3>
+                                <p class="text-gray-600">1 February 2023 • Orchestra da Camera Canova</p>
                             </div>
-                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
                         </div>
                     </div>
                     <div class="mt-8 text-center">
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                            Book a Concert
-                        </button>
+                       <a href="mailto:matteomariani@gmail.com">
+  <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+    Book a Concert
+  </button>
+</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<footer>
+<footer id="contact">
     <div class="max-w-4xl mx-auto py-6">
         <h2 class="text-center">Matteo Mariani Music</h2>
         <p class="text-center text-gray-600 text-sm">Phone: +39 3499873572</p>
