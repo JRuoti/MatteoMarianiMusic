@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Section</title>
+    <title>Matteo Mariani Music</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -13,15 +13,15 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo/Title -->
                 <div class="flex-shrink-0">
-                    <h2 class="text-2xl font-bold text-gray-900">Matteo</h2>
+                    <h2 class="text-2xl font-bold text-gray-900">Matteo Mariani Music</h2>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Servizi</a>
-                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contatti</a>
+                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Concerts</a>
+                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
                     </div>
                 </div>
                 
@@ -40,9 +40,9 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
-                <a href="#" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors">Home</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors">Servizi</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors">Contatti</a>
+                         <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Concerts</a>
+                        <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
             </div>
         </div>
     </nav>
@@ -111,250 +111,171 @@
 
             <!-- Tab Navigation -->
             <div class="flex justify-center mb-8">
-                <div class="bg-gray-100 rounded-lg p-1 flex space-x-1 relative">
+                <div class="bg-gray-100 rounded-lg p-1 flex space-x-1">
                     <button class="tab-button active px-6 py-2 rounded-md text-sm font-medium transition-colors bg-white text-blue-600 shadow-sm" data-year="all">Tutti</button>
                     <button class="tab-button px-6 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 hover:text-blue-600" data-year="2025">2025</button>
                     <button class="tab-button px-6 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 hover:text-blue-600" data-year="2024">2024</button>
-                    
-                    <!-- Dropdown Button -->
-                    <div class="relative">
-                        <button id="dropdown-btn" class="tab-button px-6 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 hover:text-blue-600 flex items-center space-x-1">
-                            <span>Altri anni</span>
-                            <svg class="w-4 h-4 transform transition-transform" id="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        
-                        <!-- Dropdown Menu -->
-                        <div id="dropdown-menu" class="absolute top-full left-0 mt-1 bg-white rounded-lg shadow-lg border border-gray-200 min-w-32 opacity-0 invisible transform scale-95 transition-all duration-200">
-                            <button class="tab-button block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-t-lg" data-year="2023">2023</button>
-                            <button class="tab-button block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" data-year="2022">2022</button>
-                            <button class="tab-button block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-b-lg" data-year="2021">2021</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                        Book a Concert
-                    </button>
+                    <button class="tab-button px-6 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 hover:text-blue-600" data-year="2023">2023</button>
                 </div>
             </div>
 
             <!-- Tab Content -->
             <div class="tab-content" id="tab-all">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- 2025 Concerti -->
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-emerald-400 to-cyan-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Milano - San Siro</h3>
-                            <p class="text-gray-600 mb-2">20 Giugno 2025</p>
-                            <p class="text-sm text-gray-500">Prossimo concerto - Biglietti disponibili</p>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Milano - San Siro Stadium</h3>
+                                <p class="text-gray-600">20 Giugno 2025 • 50,000+ persone</p>
+                            </div>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Prossimo</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Roma - Stadio Olimpico</h3>
+                                <p class="text-gray-600">15 Luglio 2025 • 65,000+ persone</p>
+                            </div>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Prossimo</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Milano - Alcatraz</h3>
+                                <p class="text-gray-600">15 Giugno 2024 • 2,000+ persone</p>
+                            </div>
+                            <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Sold Out</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Roma - Atlantico</h3>
+                                <p class="text-gray-600">22 Luglio 2024 • 1,500+ persone</p>
+                            </div>
+                            <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Sold Out</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Napoli - Casa della Musica</h3>
+                                <p class="text-gray-600">5 Settembre 2024 • 1,200+ persone</p>
+                            </div>
+                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Firenze - Viper Theatre</h3>
+                                <p class="text-gray-600">12 Marzo 2023 • 800+ persone</p>
+                            </div>
+                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Bologna - Estragon</h3>
+                                <p class="text-gray-600">25 Maggio 2023 • 1,000+ persone</p>
+                            </div>
+                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
                         </div>
                     </div>
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-violet-400 to-purple-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Roma - Stadio Olimpico</h3>
-                            <p class="text-gray-600 mb-2">15 Luglio 2025</p>
-                            <p class="text-sm text-gray-500">Tour 2025 - Biglietti disponibili</p>
-                        </div>
+                    <div class="mt-8 text-center">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+                            Book a Concert
+                        </button>
                     </div>
-                    <!-- 2024 Concerti -->
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Milano - Alcatraz</h3>
-                            <p class="text-gray-600 mb-2">15 Giugno 2024</p>
-                            <p class="text-sm text-gray-500">Sold Out - 2000+ persone</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-green-400 to-blue-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Roma - Atlantico</h3>
-                            <p class="text-gray-600 mb-2">22 Luglio 2024</p>
-                            <p class="text-sm text-gray-500">Sold Out - 1500+ persone</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Napoli - Casa della Musica</h3>
-                            <p class="text-gray-600 mb-2">5 Settembre 2024</p>
-                            <p class="text-sm text-gray-500">1200+ persone</p>
-                        </div>
-                    </div>
-                    <!-- 2023 Concerti -->
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-red-400 to-yellow-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Firenze - Viper Theatre</h3>
-                            <p class="text-gray-600 mb-2">12 Marzo 2023</p>
-                            <p class="text-sm text-gray-500">Sold Out - 800+ persone</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-indigo-400 to-purple-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Bologna - Estragon</h3>
-                            <p class="text-gray-600 mb-2">25 Maggio 2023</p>
-                            <p class="text-sm text-gray-500">1000+ persone</p>
-                        </div>
-                    </div>
-                    <!-- Altri anni... -->
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Torino - Hiroshima Mon Amour</h3>
-                            <p class="text-gray-600 mb-2">18 Ottobre 2022</p>
-                            <p class="text-sm text-gray-500">600+ persone</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-pink-400 to-red-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Live Stream - Casa</h3>
-                            <p class="text-gray-600 mb-2">15 Dicembre 2021</p>
-                            <p class="text-sm text-gray-500">5000+ visualizzazioni</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                        Book a Concert
-                    </button>
                 </div>
             </div>
 
             <div class="tab-content hidden" id="tab-2025">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-emerald-400 to-cyan-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Milano - San Siro</h3>
-                            <p class="text-gray-600 mb-2">20 Giugno 2025</p>
-                            <p class="text-sm text-gray-500">Prossimo concerto - Biglietti disponibili</p>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Milano - San Siro Stadium</h3>
+                                <p class="text-gray-600">20 Giugno 2025 • 50,000+ persone</p>
+                            </div>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Prossimo</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Roma - Stadio Olimpico</h3>
+                                <p class="text-gray-600">15 Luglio 2025 • 65,000+ persone</p>
+                            </div>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Prossimo</span>
                         </div>
                     </div>
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-violet-400 to-purple-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Roma - Stadio Olimpico</h3>
-                            <p class="text-gray-600 mb-2">15 Luglio 2025</p>
-                            <p class="text-sm text-gray-500">Tour 2025 - Biglietti disponibili</p>
-                        </div>
+                    <div class="mt-8 text-center">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+                            Book a Concert
+                        </button>
                     </div>
-                </div>
-                <div class="text-center mt-12">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                        Book a Concert
-                    </button>
                 </div>
             </div>
 
             <div class="tab-content hidden" id="tab-2024">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Milano - Alcatraz</h3>
-                            <p class="text-gray-600 mb-2">15 Giugno 2024</p>
-                            <p class="text-sm text-gray-500 mb-4">Sold Out - 2000+ persone</p>
-                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">
-                                Book a Concert
-                            </button>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Milano - Alcatraz</h3>
+                                <p class="text-gray-600">15 Giugno 2024 • 2,000+ persone</p>
+                            </div>
+                            <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Sold Out</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Roma - Atlantico</h3>
+                                <p class="text-gray-600">22 Luglio 2024 • 1,500+ persone</p>
+                            </div>
+                            <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Sold Out</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Napoli - Casa della Musica</h3>
+                                <p class="text-gray-600">5 Settembre 2024 • 1,200+ persone</p>
+                            </div>
+                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
                         </div>
                     </div>
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-green-400 to-blue-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Roma - Atlantico</h3>
-                            <p class="text-gray-600 mb-2">22 Luglio 2024</p>
-                            <p class="text-sm text-gray-500 mb-4">Sold Out - 1500+ persone</p>
-                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">
-                                Book a Concert
-                            </button>
-                        </div>
+                    <div class="mt-8 text-center">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+                            Book a Concert
+                        </button>
                     </div>
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Napoli - Casa della Musica</h3>
-                            <p class="text-gray-600 mb-2">5 Settembre 2024</p>
-                            <p class="text-sm text-gray-500 mb-4">1200+ persone</p>
-                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">
-                                Book a Concert
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                        Book a Concert
-                    </button>
                 </div>
             </div>
 
             <div class="tab-content hidden" id="tab-2023">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-red-400 to-yellow-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Firenze - Viper Theatre</h3>
-                            <p class="text-gray-600 mb-2">12 Marzo 2023</p>
-                            <p class="text-sm text-gray-500">Sold Out - 800+ persone</p>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Firenze - Viper Theatre</h3>
+                                <p class="text-gray-600">12 Marzo 2023 • 800+ persone</p>
+                            </div>
+                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
+                        </div>
+                        <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Bologna - Estragon</h3>
+                                <p class="text-gray-600">25 Maggio 2023 • 1,000+ persone</p>
+                            </div>
+                            <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Completato</span>
                         </div>
                     </div>
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-indigo-400 to-purple-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Bologna - Estragon</h3>
-                            <p class="text-gray-600 mb-2">25 Maggio 2023</p>
-                            <p class="text-sm text-gray-500">1000+ persone</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                        Book a Concert
-                    </button>
-                </div>
-            </div>
-
-            <div class="tab-content hidden" id="tab-2022">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Torino - Hiroshima Mon Amour</h3>
-                            <p class="text-gray-600 mb-2">18 Ottobre 2022</p>
-                            <p class="text-sm text-gray-500">600+ persone</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                        Book a Concert
-                    </button>
-                </div>
-            </div>
-
-            <div class="tab-content hidden" id="tab-2021">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                        <div class="h-48 bg-gradient-to-r from-pink-400 to-red-500"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Live Stream - Casa</h3>
-                            <p class="text-gray-600 mb-2">15 Dicembre 2021</p>
-                            <p class="text-sm text-gray-500">5000+ visualizzazioni</p>
-                        </div>
+                    <div class="mt-8 text-center">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+                            Book a Concert
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<footer>
+    <div class="max-w-4xl mx-auto py-6">
+        <h2 class="text-center">Matteo Mariani Music</h2>
+        <p class="text-center text-gray-600 text-sm">Phone: +39 3499873572</p>
+        <p class="text-center text-gray-600 text-sm">Email: matteomariani@gmail.com</p>
+    </div>
+</footer>
 
+    <!-- JavaScript for Navbar and Tabs -->
     <script>
         // Navbar scroll behavior
         let lastScrollTop = 0;
@@ -380,38 +301,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Dropdown functionality - Fixed version
-        const dropdownBtn = document.getElementById('dropdown-btn');
-        const dropdownMenu = document.getElementById('dropdown-menu');
-        const dropdownIcon = document.getElementById('dropdown-icon');
-        
-        if (dropdownBtn && dropdownMenu && dropdownIcon) {
-            dropdownBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                const isHidden = dropdownMenu.classList.contains('opacity-0') || dropdownMenu.classList.contains('invisible');
-                
-                if (isHidden) {
-                    // Show dropdown
-                    dropdownMenu.classList.remove('opacity-0', 'invisible', 'scale-95');
-                    dropdownIcon.style.transform = 'rotate(180deg)';
-                } else {
-                    // Hide dropdown
-                    dropdownMenu.classList.add('opacity-0', 'invisible', 'scale-95');
-                    dropdownIcon.style.transform = 'rotate(0deg)';
-                }
-            });
-            
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                    dropdownMenu.classList.add('opacity-0', 'invisible', 'scale-95');
-                    dropdownIcon.style.transform = 'rotate(0deg)';
-                }
-            });
-        }
-
         // Tab functionality
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
@@ -420,21 +309,15 @@
             button.addEventListener('click', function() {
                 const year = this.getAttribute('data-year');
                 
-                // Close dropdown if it's open
-                dropdownMenu.classList.add('opacity-0', 'invisible', 'scale-95');
-                dropdownIcon.style.transform = 'rotate(0deg)';
-                
-                // Remove active class from all main buttons (not dropdown items)
-                document.querySelectorAll('.tab-button:not(#dropdown-menu .tab-button)').forEach(btn => {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => {
                     btn.classList.remove('active', 'bg-white', 'text-blue-600', 'shadow-sm');
                     btn.classList.add('text-gray-700', 'hover:text-blue-600');
                 });
                 
-                // Add active class to clicked button (only if it's not a dropdown item)
-                if (!this.closest('#dropdown-menu')) {
-                    this.classList.add('active', 'bg-white', 'text-blue-600', 'shadow-sm');
-                    this.classList.remove('text-gray-700', 'hover:text-blue-600');
-                }
+                // Add active class to clicked button
+                this.classList.add('active', 'bg-white', 'text-blue-600', 'shadow-sm');
+                this.classList.remove('text-gray-700', 'hover:text-blue-600');
                 
                 // Hide all tab contents
                 tabContents.forEach(content => {
