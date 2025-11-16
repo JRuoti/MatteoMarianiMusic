@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,14 +58,26 @@
             </div>
         </div>
         
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
-                         <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
-                        <a href="#concerts" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Concerts</a>
-                        <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
-            </div>
-        </div>
+ <!-- Mobile Menu -->
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-full h-screen bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+    <!-- Close Button (sticky) -->
+    <button id="mobile-menu-close" class="absolute top-4 right-6 text-gray-700 hover:text-blue-600 focus:outline-none">
+        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <div class="flex flex-col justify-start items-start h-full px-8 pt-24 space-y-8">
+        <a href="#about" class="text-gray-700 hover:text-blue-600 text-2xl font-semibold transition-colors">About</a>
+        <a href="#concerts" class="text-gray-700 hover:text-blue-600 text-2xl font-semibold transition-colors">Concerts</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 text-2xl font-semibold transition-colors">Contact</a>
+    </div>
+</div>
+
+
+
     </nav>
 
  <!-- Hero Section -->
@@ -363,23 +375,25 @@ Harris among many others.
 ---------------------------------------- */
 const mobileMenuBtn = document.getElementById("mobile-menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
-const iconHamburger = document.getElementById("icon-hamburger");
-const iconClose = document.getElementById("icon-close");
+const mobileMenuClose = document.getElementById("mobile-menu-close");
 
-// Toggle menu al click sull'icona
 mobileMenuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    iconHamburger.classList.toggle("hidden");
-    iconClose.classList.toggle("hidden");
+    mobileMenu.classList.toggle("translate-x-full");
+    mobileMenu.classList.toggle("translate-x-0");
 });
 
-// Chiudi menu quando si clicca una voce
+// Chiudi menu cliccando la X
+mobileMenuClose.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    mobileMenu.classList.remove("translate-x-0");
+});
+
+// Chiudi menu cliccando su una voce
 const mobileMenuLinks = mobileMenu.querySelectorAll("a");
 mobileMenuLinks.forEach(link => {
     link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-        iconHamburger.classList.remove("hidden");
-        iconClose.classList.add("hidden");
+        mobileMenu.classList.add("translate-x-full");
+        mobileMenu.classList.remove("translate-x-0");
     });
 });
 
