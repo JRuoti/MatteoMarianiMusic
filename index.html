@@ -7,6 +7,19 @@
     <!-- Favicon -->
   <link rel="icon" href="img-teo/classic-guitar-favicon.svg" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in-up.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
 </head>
 <body>
     <!-- Navbar -->
@@ -388,6 +401,36 @@ Harris among many others.
             document.getElementById(`tab-${year}`).classList.remove('hidden');
         });
     });
+
+
+  /* ----------------------------------------
+       Animazioni-generali
+    ---------------------------------------- */
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll("h1, p, button, img");
+
+        elements.forEach(el => {
+            el.classList.add("fade-in-up");
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        elements.forEach(el => observer.observe(el));
+    });
+
+
+
+
+
 </script>
 
 </body>
