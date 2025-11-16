@@ -27,15 +27,21 @@
                     </div>
                 </div>
                 
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600">
-                        <!-- Hamburger icon (puoi sostituire con le tue icone) -->
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+              <!-- Mobile menu button -->
+<button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+    <!-- Icona hamburger -->
+    <svg id="icon-hamburger" class="h-7 w-7 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+
+    <!-- Icona X -->
+    <svg id="icon-close" class="h-7 w-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+    </svg>
+</button>
+
             </div>
         </div>
         
@@ -320,59 +326,69 @@ Harris among many others.
     </div>
 </footer>
 
-    <!-- JavaScript for Navbar and Tabs -->
-    <script>
-        // Navbar scroll behavior
-        let lastScrollTop = 0;
-        const navbar = document.getElementById('navbar');
+   <script>
+    /* ----------------------------------------
+       NAVBAR SCROLL BEHAVIOR (immutato)
+    ---------------------------------------- */
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            navbar.style.transform = 'translateY(-100%)'; // nasconde navbar
+        } else {
+            navbar.style.transform = 'translateY(0)'; // mostra navbar
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+
+    /* ----------------------------------------
+       MOBILE MENU TOGGLE (nuovo e corretto)
+    ---------------------------------------- */
+    const mobileMenuBtn = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const iconHamburger = document.getElementById("icon-hamburger");
+    const iconClose = document.getElementById("icon-close");
+
+    mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        iconHamburger.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+    });
+
+    /* ----------------------------------------
+       TAB FUNCTIONALITY (immutato)
+    ---------------------------------------- */
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const year = this.getAttribute('data-year');
             
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scroll down - hide navbar
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                // Scroll up - show navbar
-                navbar.style.transform = 'translateY(0)';
-            }
-            
-            lastScrollTop = scrollTop;
-        });
-
-        // Toggle mobile menu
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Tab functionality
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const year = this.getAttribute('data-year');
-                
-                // Remove active class from all buttons
-                tabButtons.forEach(btn => {
-                    btn.classList.remove('active', 'bg-white', 'text-blue-600', 'shadow-sm');
-                    btn.classList.add('text-gray-700', 'hover:text-blue-600');
-                });
-                
-                // Add active class to clicked button
-                this.classList.add('active', 'bg-white', 'text-blue-600', 'shadow-sm');
-                this.classList.remove('text-gray-700', 'hover:text-blue-600');
-                
-                // Hide all tab contents
-                tabContents.forEach(content => {
-                    content.classList.add('hidden');
-                });
-                
-                // Show selected tab content
-                document.getElementById(`tab-${year}`).classList.remove('hidden');
+            // Remove active class from all buttons
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active', 'bg-white', 'text-blue-600', 'shadow-sm');
+                btn.classList.add('text-gray-700', 'hover:text-blue-600');
             });
+            
+            // Add active class to clicked button
+            this.classList.add('active', 'bg-white', 'text-blue-600', 'shadow-sm');
+            this.classList.remove('text-gray-700', 'hover:text-blue-600');
+            
+            // Hide all tab contents
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Show selected tab content
+            document.getElementById(`tab-${year}`).classList.remove('hidden');
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
