@@ -11,7 +11,7 @@
     .fade-in-up {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
 
     .fade-in-up.show {
@@ -70,22 +70,22 @@
 
  <!-- Hero Section -->
 <div class="flex flex-col md:flex-row h-auto md:h-screen pt-16">
-  <!-- Left Column -->
-  <div class="w-full md:w-1/2 flex items-center justify-center px-8 py-12">
+ <!-- Left Column -->
+<div class="w-full md:w-1/2 flex items-center justify-center px-8 py-12 hero-left">
     <div class="space-y-6">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
-        Strings across <br> Milan and Boston
-      </h1>
-      <p class="text-lg md:text-xl text-gray-600 max-w-md mx-auto">
-        A soulful, modern voice in jazz guitar, shaped by tradition and innovation.
-      </p>
-     <a href="mailto:matteomariani@gmail.com" 
-   class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-block">
-  Get in touch
-</a>
-
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
+            Strings across <br> Milan and Boston
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-md mx-auto">
+            A soulful, modern voice in jazz guitar, shaped by tradition and innovation.
+        </p>
+        <a href="mailto:matteomariani@gmail.com" 
+           class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-block">
+           Get in touch
+        </a>
     </div>
-  </div>
+</div>
+
 
   <!-- Right Column (gradient placeholder) -->
  <div
@@ -359,18 +359,29 @@ Harris among many others.
     });
 
     /* ----------------------------------------
-       MOBILE MENU TOGGLE (nuovo e corretto)
-    ---------------------------------------- */
-    const mobileMenuBtn = document.getElementById("mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const iconHamburger = document.getElementById("icon-hamburger");
-    const iconClose = document.getElementById("icon-close");
+   MOBILE MENU TOGGLE (aggiornato con chiusura su click voce)
+---------------------------------------- */
+const mobileMenuBtn = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+const iconHamburger = document.getElementById("icon-hamburger");
+const iconClose = document.getElementById("icon-close");
 
-    mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        iconHamburger.classList.toggle("hidden");
-        iconClose.classList.toggle("hidden");
+// Toggle menu al click sull'icona
+mobileMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    iconHamburger.classList.toggle("hidden");
+    iconClose.classList.toggle("hidden");
+});
+
+// Chiudi menu quando si clicca una voce
+const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+mobileMenuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        iconHamburger.classList.remove("hidden");
+        iconClose.classList.add("hidden");
     });
+});
 
     /* ----------------------------------------
        TAB FUNCTIONALITY (immutato)
@@ -407,29 +418,32 @@ Harris among many others.
        Animazioni-generali
     ---------------------------------------- */
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll("h1, p, button, img");
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("h1, p, button, img, .hero-left");
 
-        elements.forEach(el => {
-            el.classList.add("fade-in-up");
-        });
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        elements.forEach(el => observer.observe(el));
+    elements.forEach(el => {
+        el.classList.add("fade-in-up");
     });
 
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
 
+    elements.forEach(el => observer.observe(el));
 
-
+    // Trigger animazione subito per gli elementi già visibili (es: hero)
+    elements.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+            setTimeout(() => el.classList.add("show"), 500);
+        }
+    });
+});
 
 </script>
 
