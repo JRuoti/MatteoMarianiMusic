@@ -37,12 +37,30 @@ p, li, span {
 }
 
 
+.noise {
+  background-color: #E5E6E1;
+  position: relative;
+}
+
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+     repeating-radial-gradient(circle at 0 0, #000 0, #000 1px, transparent 1px, transparent 3px);
+  opacity: 0.08; /* intensità del noise */
+  mix-blend-mode: multiply;
+}
+
+
+
 </style>
 
 </head>
 <body class="bg-[#E7E9E1]">
     <!-- Navbar -->
-    <nav id="navbar" class="bg-white shadow-lg fixed w-full top-0 z-50 transition-transform duration-300">
+    <nav id="navbar" class=" noise shadow-lg fixed w-full top-0 z-50 transition-transform duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo/Title -->
@@ -137,7 +155,7 @@ p, li, span {
   <div class="w-full md:w-1/2 flex items-center justify-center px-8 py-12">
     <div class="space-y-6">
       <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
-        Matteo's Background
+        <span class="text-[#C54D20]">M</span>atteo's Background
       </h1>
       <p class="text-lg md:text-xl text-gray-600 max-w-md mx-auto pt-6">
         Originally from Milan, Italy, Matteo Mariani began his formal music education at the
@@ -167,7 +185,7 @@ Harris among many others.
     <div id="concerts" class="min-h-screen py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Matteo's Concerts</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4"><span class="text-[#C54D20]">M</span>atteo's Concerts</h2>
                 <p class="text-xl text-gray-600">Explore the timeline of past performances. Relive the journey.</p>
             </div>
 
@@ -190,14 +208,14 @@ Harris among many others.
                                 <h3 class="text-lg font-semibold text-gray-900">Ibiza - Can Jaume</h3>
                                 <p class="text-gray-600">29 June 2025 • Mariani-Serrabofil • Duo live</p>
                             </div>
-                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Upcoming</span>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1">Upcoming</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900">Ibiza - Jazztabe</h3>
                                 <p class="text-gray-600">26 June 2025 • Quartet live</p>
                             </div>
-                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Upcoming</span>
+                            <span class="text-sm bg-green-100 text-green-700 px-3 py-1">Upcoming</span>
                         </div>
                         <div class="flex items-center justify-between py-4 px-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div>
@@ -367,7 +385,7 @@ Harris among many others.
             </div>
         </div>
     </div>
-<footer id="contact">
+<footer class="noise" id="contact">
     <div class="max-w-4xl mx-auto py-6">
         <h2 class="text-center">Matteo Mariani Music</h2>
         <p class="text-center text-gray-600 text-sm">Phone: +39 3499873572</p>
