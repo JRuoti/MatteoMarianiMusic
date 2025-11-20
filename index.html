@@ -7,7 +7,6 @@
     <!-- Favicon -->
   <link rel="icon" href="img-teo/classic-guitar-favicon.svg" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://api.fontshare.com/css?f[]=clash-display@400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="neco.css">
     <style>
     .fade-in-up {
@@ -81,40 +80,36 @@ button, a {
                     </div>
                 </div>
                 
-              <!-- Mobile menu button -->
-<!-- Mobile menu button -->
-<button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
-    <!-- Icona hamburger personalizzata -->
+          <!-- Mobile menu button -->
+<button id="mobile-menu-button" class=" noise md:hidden text-gray-700 hover:text-[#C54D20] focus:outline-none">
     <img id="icon-hamburger" src="img-teo/menu-icon-mariani.svg" class="h-12 w-12 block" alt="Menu">
 
-    <!-- Icona X rimane SVG o img -->
     <svg id="icon-close" class="h-7 w-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M6 18L18 6M6 6l12 12" />
     </svg>
 </button>
 
+<!-- Mobile Menu -->
+<div id="mobile-menu" class=" noise md:hidden fixed top-0 right-0 w-full h-screen bg-[#E7E9E1] shadow-lg transform translate-x-full transition-transform duration-300 z-50">
 
-            </div>
-        </div>
-        
- <!-- Mobile Menu -->
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu" class="md:hidden fixed top-0 right-0 w-full h-screen bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
-    <!-- Close Button (sticky) -->
-    <button id="mobile-menu-close" class="absolute top-4 right-6 text-gray-700 hover:text-blue-600 focus:outline-none">
+    <!-- Close Button -->
+    <button id="mobile-menu-close" class="absolute top-4 right-6 text-gray-700 hover:text-[#C54D20] focus:outline-none">
         <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M6 18L18 6M6 6l12 12" />
         </svg>
     </button>
 
+    <!-- Links -->
     <div class="flex flex-col justify-start items-start h-full px-8 pt-24 space-y-8">
-        <a href="#about" class="text-gray-700 hover:text-blue-600 text-2xl font-semibold transition-colors">About</a>
-        <a href="#concerts" class="text-gray-700 hover:text-blue-600 text-2xl font-semibold transition-colors">Concerts</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-600 text-2xl font-semibold transition-colors">Contact</a>
+        <a href="#about" class="text-gray-700 hover:text-[#C54D20] text-2xl font-semibold transition-colors">About</a>
+        <a href="#concerts" class="text-gray-700 hover:text-[#C54D20] text-2xl font-semibold transition-colors">Concerts</a>
+        <a href="#contact" class="text-gray-700 hover:text-[#C54D20] text-2xl font-semibold transition-colors">Contact</a>
     </div>
+
 </div>
+
 
 
 
@@ -314,8 +309,7 @@ Harris among many others.
                     </div>
                     <div class="mt-8 text-center">
                        <a href="mailto:matteomariani@gmail.com">
-<button class="btn-orange font-semibold py-3 px-8 inline-block transition-colors"
->
+<button class="btn-orange font-semibold py-3 px-8 inline-block transition-colors">
                                 Book a Concert
                             </button
 </a>
