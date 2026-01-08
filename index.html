@@ -9,6 +9,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="neco.css">
     <style>
+
+body {
+  font-family: 'Neco-Regular', system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: 'Neco-Regular';
+  src: url('./fonts/Neco-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neco-Bold';
+  src: url('./fonts/Neco-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neco-MediumItalic';
+  src: url('./fonts/Neco-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+     
     .fade-in-up {
         opacity: 0;
         transform: translateY(20px);
@@ -145,7 +175,7 @@ button, a {
   <img 
     src="img-teo/matteo-desktop.png"
     alt="Matteo"
-    class="w-[85%] h-auto object-contain"
+    class="w-[95%] md:w-[85%] h-auto object-contain"
   >
 </div>
 </div>
